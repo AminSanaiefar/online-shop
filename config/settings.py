@@ -50,6 +50,8 @@ INSTALLED_APPS = [
 
     # local apps
     'accounts',
+    'pages',
+    'products',
 ]
 
 SITE_ID = 1
@@ -94,12 +96,25 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
+        # define database engine -->
         'ENGINE': 'django.db.backends.postgresql',
+
+        # Connection To Docker DB
+        # 'NAME': 'postgres',
+        # 'USER': 'postgres',
+        # 'PASSWORD': 'postgres',
+        # 'HOST': 'db',
+
+        # Connection To Local Host DB -->
         'NAME': 'online_shop',
         'USER': f'{env("USER_NAME")}',
         'PASSWORD': f'{env("USER_PASS")}',
         'HOST': '127.0.0.1',
+
+        # define port For postgres (5432 is default port) -->
         'PORT': 5432
+
+        # django default connection to SQLite3
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': BASE_DIR / 'db.sqlite3',
     }
