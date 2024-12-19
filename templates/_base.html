@@ -9,7 +9,20 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-
+{% if user.is_authenticated %}
+    <div class="mx-3 mt-2">
+        <h5>Welcome <span class="text-info">{{ user.email }}</span>
+            <span>
+            <a href="{% url 'account_logout' %}" class="btn btn-outline-danger">Log Out</a>    
+            </span>
+        </h5>
+        {% else %}
+        <div class="mx-3 mt-2">
+            <a href="{% url 'account_login' %}" class="btn btn-outline-success">Log In</a>
+            <a href="{% url 'account_signup' %}" class="btn btn-outline-success">Sign Up</a>
+        </div>
+    </div>
+{% endif %}
 {% block content %}
 {% endblock %}
 
