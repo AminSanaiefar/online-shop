@@ -1,0 +1,11 @@
+{% extends '_base.html' %}
+{% block title %}Detail:{{ product.title }}{% endblock %}
+{% block content %}
+
+    <h1 class="text-success">Product: <span class="text-info">{{ product.title }}</span></h1>
+    <h2>{{ product.title }}</h2>
+    <h4>{{ product.description }}</h4>
+    <h5>{{ product.price }}</h5>
+    <h5>{{ product.datetime_created }}</h5>
+
+{% endblock %}
