@@ -21,17 +21,18 @@ class Product(models.Model):
 
 class ActiveCommentsManager(models.Manager):
     def get_queryset(self):
-        return super().get_queryset().filter(active=True)
+        return super().get_queryset().filter(is_active=True)
 
 
 class Comment(models.Model):
-    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
-    text = models.TextField()
+    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, verbose_name='Comment Author')
+    text = models.TextField(verbose_name='Comment Text')
     rate = models.PositiveIntegerField(default=5,
                                        validators=[MaxValueValidator(5, message="rating can't be more than Five!"),
-                                                   MinValueValidator(0, message="rating can't be less than Zero!")])
+                                                   MinValueValidator(0, message="rating can't be less than Zero!")],
+                                       verbose_name='Rate')
     product = models.ForeignKey(Product, related_name='comments', on_delete=models.CASCADE)
-    is_active = models.BooleanField(default=True)
+    is_active = models.BooleanField(default=True, verbose_name='Active')
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now=True)
 
