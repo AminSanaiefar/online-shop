@@ -52,9 +52,10 @@ INSTALLED_APPS = [
     'rosetta',
 
     # local apps
-    'accounts',
-    'pages',
-    'products',
+    'accounts.apps.AccountsConfig',
+    'pages.apps.PagesConfig',
+    'products.apps.ProductsConfig',
+    'cart.apps.CartConfig',
 ]
 
 SITE_ID = 1
