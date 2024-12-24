@@ -1,6 +1,9 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, render
 from django.views import generic
+from django.contrib import messages
+from django.utils.translation import gettext as _
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import Product, Comment
 from . forms import CommentForm
@@ -48,7 +51,7 @@ def product_detail_view(request, pk):
                            })
 
 
-class CommentCreateView(generic.CreateView):
+class CommentCreateView(LoginRequiredMixin, generic.CreateView):
     model = Comment
     form_class = CommentForm
 
@@ -59,4 +62,5 @@ class CommentCreateView(generic.CreateView):
         product = get_object_or_404(Product, pk=pid)
         obj.product = product
         obj.save()
+        messages.add_message(self.request, messages.INFO, _("Comment Sent!"))
         return super().form_valid(form)

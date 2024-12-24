@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 from environs import Env
 import os
+from django.contrib.messages import constants as messages
 
 env = Env()
 env.read_env()
@@ -161,6 +162,11 @@ LANGUAGES = (
     ('fa', 'Persian')
 )
 
+# Set Path for Translate Root Templates
+LOCALE_PATHS = (
+    'templates/locale',
+)
+
 # TIME_ZONE= 'UTC'
 TIME_ZONE = 'Asia/Tehran'
 
@@ -199,3 +205,12 @@ ACCOUNT_UNIQUE_EMAIL = True
 # config media
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+
+# messages config
+MESSAGE_TAGS = {
+    messages.ERROR: 'alert alert-danger',
+    messages.SUCCESS: 'alert alert-success',
+    messages.WARNING: 'alert alert-warning',
+    messages.INFO: 'alert alert-primary',
+}

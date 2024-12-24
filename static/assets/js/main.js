@@ -777,7 +777,7 @@
 		$('.ShoppingYar-preloader').removeClass("active");
 	});
 
-
+$('.alert').alert()
 
 
 })(jQuery);

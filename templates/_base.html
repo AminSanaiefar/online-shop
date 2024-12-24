@@ -1,9 +1,11 @@
 {% load static %}
+{% load i18n %}
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>KosShop:{% block title %}{% endblock %}</title>
+    <title>SlaveTrade:{% block title %}{% endblock %}</title>
 
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -23,12 +25,14 @@
 
     <!-- style css -->
     <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
-    
+
     {% block css %}
         
     {% endblock %}
 </head>
+
 <body dir='rtl'>
+
 <!-- Preloader Start -->
 <div class="ShoppingYar-preloader active">
     <div class="ShoppingYar-preloader-inner h-100 d-flex align-items-center justify-content-center">
@@ -57,22 +61,22 @@
                             <ul class="mainmenu d-lg-flex jusity-content-end jusity-content-lg-start pt-4">
                                 <li class="mainmenu__item menu-item-has-children active">
                                     <a href="{% url 'home' %}" class="mainmenu__link">
-                                        <span class="mm-text">خانه</span>
+                                        <span class="mm-text">{% trans 'Home' %}</span>
                                     </a>
                                 </li>
                                 <li class="mainmenu__item menu-item-has-children">
                                     <a href="Blog.html" class="mainmenu__link">
-                                        <span class="mm-text">وبلاگ</span>
+                                        <span class="mm-text">{% trans 'Weblog' %}</span>
                                     </a>
                                 </li>
                                 <li class="mainmenu__item menu-item-has-children">
                                     <a href="#" class="mainmenu__link">
-                                        <span class="mm-text">صفحات</span>
+                                        <span class="mm-text">{% trans 'Pages' %}</span>
                                     </a>
                                  </li>
                                 <li class="mainmenu__item">
                                     <a href="contact-us.html" class="mainmenu__link">
-                                        <span class="mm-text">تماس با ما</span>
+                                        <span class="mm-text">{% trans 'Contact us' %}</span>
                                     </a>
                                 </li>
                             </ul>
@@ -98,16 +102,16 @@
                             </a>
                             <ul class="user-info-menu">
                                 <li>
-                                    <a class="text-right" href="my-account.html">حساب کاربری</a>
+                                    <a class="text-right" href="my-account.html">{% trans 'User account' %}</a>
                                 </li>
                                 <li>
-                                    <a class="text-right" href="cart.html">سبد خرید</a>
+                                    <a class="text-right" href="cart.html">{% trans 'Shopping card' %}</a>
                                 </li>
                                 <li>
-                                    <a class="text-right" href="wishlist.html">علاقه مندی ها</a>
+                                    <a class="text-right" href="wishlist.html">{% trans 'Favorits' %}</a>
                                 </li>
                                 <li>
-                                    <a class="text-right" href="order-tracking.html">تاریخچه سفارشات</a>
+                                    <a class="text-right" href="order-tracking.html">{% trans 'Order history' %}</a>
                                 </li>
                             </ul>
                         </li>
@@ -129,6 +133,27 @@
 </header>
 <!-- Header End -->
 
+<!-- Messages-->
+{% if messages %}
+    <div class="container">
+        <ul class="messages">
+            {% for message in messages %}
+                <div class="col col-sm-2">
+                    <div class="row justify-content-md-center">
+                        <div class="{{ message.tags }} alert-dismissible fade show" role="alert">
+                            {{ message }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+<!-- End Messages -->
+
 {% block content %}
     
 {% endblock %}
@@ -146,13 +171,13 @@
                     </div>
                     <div class="footer-widget mb--50 pb--1">
                         <ul class="footer-menu">
-                            <li><a href="">درباره ما</a></li>
-                            <li><a href="">قوانین و مقررات</a></li>
-                            <li><a href="">تماس با ما</a></li>
+                            <li><a href="">{% trans 'About us' %}</a></li>
+                            <li><a href="">{% trans 'Rules and regulations' %}</a></li>
+                            <li><a href="">{% trans 'Contact us' %}</a></li>
                         </ul>
                     </div>
                     <div class="footer-widget">
-                        Codingyar.com © | all rights reserved
+                        Slavery.shop © | all rights reserved
                     </div>
                 </div>
             </div>
@@ -167,5 +192,9 @@
 
 <!-- Main JS -->
 <script src="{% static 'assets/js/main.js' %}"></script>
+
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </body>
 </html>
