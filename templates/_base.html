@@ -32,7 +32,6 @@
 </head>
 
 <body dir='rtl'>
-
 <!-- Preloader Start -->
 <div class="ShoppingYar-preloader active">
     <div class="ShoppingYar-preloader-inner h-100 d-flex align-items-center justify-content-center">
@@ -53,7 +52,8 @@
                         <div class="site-branding" style="margin-right: 30px;">
                             <a href="{% url 'home' %}" class="logo">
                                 <figure class="logo--normal d-none d-sm-block">
-                                    <img class="px-5" src="{% static 'assets/img/codingyar_logo.png' %}" style="max-height: 50px; margin-bottom: -15px;" alt="Logo">
+                                    <img class="px-5" src="{% static 'assets/img/icons/Slave.png' %}" 
+                                         style="max-height: 80px; margin-bottom: -15px;" alt="Logo">
                                 </figure>
                             </a>
                         </div>
@@ -93,7 +93,9 @@
                         <li class="header-toolbar__item mini-cart-item">
                             <a href="#miniCart" class="header-toolbar__btn toolbar-btn mini-cart-btn">
                                 <i class="flaticon flaticon-shopping-cart"></i>
-                                <sup class="mini-cart-count">2</sup>
+                                {% if cart|length > 0 %}
+                                    <sup class="mini-cart-count">{{ cart|length }}</sup>
+                                {% endif %} 
                             </a>
                         </li>
                         <li class="header-toolbar__item user-info">
@@ -101,12 +103,18 @@
                                 <i class="flaticon flaticon-user"></i>
                             </a>
                             <ul class="user-info-menu">
-                                <li>
-                                    <a class="text-right" href="my-account.html">{% trans 'User account' %}</a>
-                                </li>
-                                <li>
-                                    <a class="text-right" href="cart.html">{% trans 'Shopping card' %}</a>
-                                </li>
+                                {% if user.is_authenticated %}
+                                    <li>
+                                        <a class="text-right" href="{% url 'account_logout' %}">{% trans 'Log Out' %}</a>
+                                    </li>
+                                {% else %}
+                                    <li>
+                                        <a class="text-right" href="{% url 'account_login' %}">{% trans 'Log in' %}</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-right" href="{% url 'account_signup' %}">{% trans 'Sign Up' %}</a>
+                                    </li>
+                                {% endif %} 
                                 <li>
                                     <a class="text-right" href="wishlist.html">{% trans 'Favorits' %}</a>
                                 </li>
@@ -158,6 +166,8 @@
     
 {% endblock %}
 
+{% include 'cart/cart_sidebar.html' %}
+
 <!-- Footer Start-->
 <footer class="footer">
     <div class="footer-top bg-color ptb--50" data-bg-color="#f6f6f6">
@@ -166,7 +176,8 @@
                 <div class="col-lg-9 text-center">
                     <div class="footer-widget mb--50">
                         <div class="textwidget">
-                            <img src="{% static 'assets/img/codingyar_logo.png' %}" alt="Logo">
+                            <img src="{% static 'assets/img/icons/slavery.png' %}" alt="Logo"
+                            style="max-height: 150px; margin-bottom: -15px;">
                         </div>
                     </div>
                     <div class="footer-widget mb--50 pb--1">
@@ -194,7 +205,9 @@
 <script src="{% static 'assets/js/main.js' %}"></script>
 
 <!-- bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous">
+</script>
 </body>
 </html>

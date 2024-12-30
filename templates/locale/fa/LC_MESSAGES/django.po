@@ -8,51 +8,77 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-23 12:02+0330\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2024-12-30 20:49+0330\n"
+"PO-Revision-Date: 2024-12-30 20:47+0330\n"
+"Last-Translator:   <amin@amin.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-#: .\_base.html:62
+"X-Translated-Using: django-rosetta 0.10.1\n"
+
+#: .\_base.html:65
 msgid "Home"
 msgstr "خانه"
 
-#: .\_base.html:67
+#: .\_base.html:70
 msgid "Weblog"
 msgstr "وبلاگ"
 
-#: .\_base.html:72
+#: .\_base.html:75
 msgid "Pages"
 msgstr "صفحات"
 
-#: .\_base.html:77 .\_base.html:153
+#: .\_base.html:80 .\_base.html:229
 msgid "Contact us"
 msgstr "تماس با ما"
 
-#: .\_base.html:103
-msgid "User account"
-msgstr "حساب کاربری"
-
-#: .\_base.html:106
-msgid "Shopping card"
-msgstr "سبد خرید"
-
 #: .\_base.html:109
+msgid "Log Out"
+msgstr "خروج"
+
+#: .\_base.html:113
+msgid "Log in"
+msgstr "ورود"
+
+#: .\_base.html:116
+msgid "Sign Up"
+msgstr "ثبت نام"
+
+#: .\_base.html:120
 msgid "Favorits"
 msgstr "علاقه مندی ها"
 
-#: .\_base.html:112
+#: .\_base.html:123
 msgid "Order history"
 msgstr "تاریجچه سفارشات"
 
-#: .\_base.html:151
+#: .\_base.html:171
+msgid "Cart"
+msgstr "سبد خرید"
+
+#: .\_base.html:189 .\_base.html:197
+msgid "$"
+msgstr "تومان"
+
+#: .\_base.html:196
+msgid "total price"
+msgstr "قیمت کل"
+
+#: .\_base.html:200
+msgid "Go to cart"
+msgstr "مشاهده سبد خرید"
+
+#: .\_base.html:201
+msgid "checkout"
+msgstr "پرداخت"
+
+#: .\_base.html:227
 msgid "About us"
 msgstr "درباره ما"
 
-#: .\_base.html:152
+#: .\_base.html:228
 msgid "Rules and regulations"
 msgstr "قوانین و مقررات"
 
@@ -66,7 +92,6 @@ msgid ""
 "%(activate_url)s\n"
 "\n"
 msgstr ""
-
 
 #: .\account\email_confirm.html:6 .\account\email_confirm.html:10
 msgid "Confirm Email Address"
@@ -96,3 +121,9 @@ msgid ""
 "This email confirmation link expired or is invalid. Please <a href=\"%"
 "(email_url)s\">issue a new email confirmation request</a>."
 msgstr ""
+
+#~ msgid "User account"
+#~ msgstr "حساب کاربری"
+
+#~ msgid "Shopping card"
+#~ msgstr "سبد خرید"
