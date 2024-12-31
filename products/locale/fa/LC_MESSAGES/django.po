@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-23 13:20+0330\n"
+"POT-Creation-Date: 2024-12-30 19:25+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,100 +39,108 @@ msgstr "توضیحات محصول"
 
 #: .\templates\products\product_detail.html:50
 #: .\templates\products\product_detail.html:52
-#: .\templates\products\product_detail.html:257
-#: .\templates\products\product_detail.html:272
+#: .\templates\products\product_detail.html:269
+#: .\templates\products\product_detail.html:284
 msgid "$"
 msgstr "تومان"
 
-#: .\templates\products\product_detail.html:61
+#: .\templates\products\product_detail.html:64
 msgid "Add To Card"
 msgstr "اضافه به سبد خرید"
 
-#: .\templates\products\product_detail.html:65
+#: .\templates\products\product_detail.html:70
 msgid "Categories"
 msgstr "دسته بندی ها"
 
-#: .\templates\products\product_detail.html:66
+#: .\templates\products\product_detail.html:71
 msgid "Clothes"
 msgstr "لباس"
 
-#: .\templates\products\product_detail.html:67
+#: .\templates\products\product_detail.html:72
 msgid "Summer"
 msgstr "تابستانی"
 
-#: .\templates\products\product_detail.html:68
+#: .\templates\products\product_detail.html:73
 msgid "Warm"
 msgstr "گرم"
 
-#: .\templates\products\product_detail.html:69
+#: .\templates\products\product_detail.html:74
 msgid "Feminine"
 msgstr "زنانه"
 
-#: .\templates\products\product_detail.html:81
+#: .\templates\products\product_detail.html:86
 msgid "Product Description"
 msgstr "توضیحات محصول"
 
-#: .\templates\products\product_detail.html:85
+#: .\templates\products\product_detail.html:90
 msgid "Product Features"
 msgstr "ویژگی های محصول"
 
-#: .\templates\products\product_detail.html:89
+#: .\templates\products\product_detail.html:94
 msgid "Comments"
 msgstr "نظرات"
 
-#: .\templates\products\product_detail.html:105
+#: .\templates\products\product_detail.html:110
 msgid "Weight"
 msgstr "وزن"
 
-#: .\templates\products\product_detail.html:109
+#: .\templates\products\product_detail.html:114
 msgid "Size"
 msgstr "اندازه"
 
-#: .\templates\products\product_detail.html:115
+#: .\templates\products\product_detail.html:120
 msgid "Black"
 msgstr "مشکی"
 
-#: .\templates\products\product_detail.html:116
+#: .\templates\products\product_detail.html:121
 msgid "Green"
 msgstr "سبز"
 
-#: .\templates\products\product_detail.html:117
+#: .\templates\products\product_detail.html:122
 msgid "red"
 msgstr "قرمز"
 
-#: .\templates\products\product_detail.html:118
+#: .\templates\products\product_detail.html:123
 msgid "Orange"
 msgstr "نارنجی"
 
-#: .\templates\products\product_detail.html:128
+#: .\templates\products\product_detail.html:133
 msgid "Comments For"
 msgstr "نظر برای"
 
-#: .\templates\products\product_detail.html:185
+#: .\templates\products\product_detail.html:191
 msgid "Write Your Comment"
 msgstr "نظر خود را بنویسید"
 
-#: .\templates\products\product_detail.html:190
+#: .\templates\products\product_detail.html:196
 msgid "Send"
 msgstr "ارسال"
 
-#: .\templates\products\product_detail.html:226
+#: .\templates\products\product_detail.html:201
+msgid "to write comment please log in to your account first"
+msgstr "برای نوشتن نظر اول وارد حسابت شو"
+
+#: .\templates\products\product_detail.html:202
+msgid "Log in<"
+msgstr "ورود به حساب"
+
+#: .\templates\products\product_detail.html:238
 msgid "Shopping Card"
 msgstr "سبد خرید"
 
-#: .\templates\products\product_detail.html:281
+#: .\templates\products\product_detail.html:293
 msgid "Check shopping card"
 msgstr "مشاهده سبد خرید"
 
-#: .\templates\products\product_detail.html:282
+#: .\templates\products\product_detail.html:294
 msgid "Pay"
 msgstr "پرداخت"
 
-#: .\templates\products\product_detail.html:319
-#: .\templates\products\product_detail.html:328
+#: .\templates\products\product_detail.html:331
+#: .\templates\products\product_detail.html:340
 msgid "Sale"
 msgstr "فروش"
 
-#: .\views.py:65
+#: .\views.py:66
 msgid "Comment Sent!"
 msgstr "نظر ارسال شد!"

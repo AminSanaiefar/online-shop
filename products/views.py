@@ -6,7 +6,7 @@ from django.utils.translation import gettext as _
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import Product, Comment
-from . forms import CommentForm
+from .forms import CommentForm
 
 
 class ProductListView(generic.ListView):
@@ -27,6 +27,7 @@ class ProductDetailView(generic.DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['comment_form'] = CommentForm()
+        # context['add_to_cart_form'] = AddToCartProductForm()
         return context
 
 
@@ -62,5 +63,5 @@ class CommentCreateView(LoginRequiredMixin, generic.CreateView):
         product = get_object_or_404(Product, pk=pid)
         obj.product = product
         obj.save()
-        messages.add_message(self.request, messages.INFO, _("Comment Sent!"))
+        messages.success(self.request, messages.INFO, _("Comment Sent!"))
         return super().form_valid(form)

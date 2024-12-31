@@ -23,6 +23,9 @@ urlpatterns = [
     path('', include('pages.urls')),
     path('accounts/', include('allauth.urls')),
     path('products/', include('products.urls')),
+    path('cart/', include('cart.urls')),
+
+    # rosetta path
     path('rosetta/', include('rosetta.urls')),
 ]
 if settings.DEBUG:
