@@ -4,11 +4,14 @@ from django.contrib.auth import get_user_model
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.utils.translation import gettext_lazy as _
 
+from .upload_method import product_image_upload
+
 
 class Product(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     price = models.PositiveIntegerField(default=0)
+    image = models.ImageField(verbose_name=_('Product Image'), upload_to=product_image_upload, blank=True)
     active = models.BooleanField(default=True)
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now=True)
