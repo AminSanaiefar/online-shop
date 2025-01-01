@@ -4,12 +4,13 @@ from django.contrib.auth import get_user_model
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.utils.translation import gettext_lazy as _
 
+from tinymce import models as tiny_models
 from .upload_method import product_image_upload
 
 
 class Product(models.Model):
     title = models.CharField(max_length=100)
-    description = models.TextField()
+    description = tiny_models.HTMLField()
     price = models.PositiveIntegerField(default=0)
     image = models.ImageField(verbose_name=_('Product Image'), upload_to=product_image_upload, blank=True)
     active = models.BooleanField(default=True)

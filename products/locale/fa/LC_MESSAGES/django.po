@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-30 19:25+0330\n"
+"POT-Creation-Date: 2024-12-31 14:18+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,130 +17,136 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\models.py:29
+#: .\models.py:14
+#, fuzzy
+#| msgid "Product Features"
+msgid "Product Image"
+msgstr "ویژگی های محصول"
+
+#: .\models.py:32
 msgid "Comment Author"
 msgstr "نویسنده"
 
-#: .\models.py:30
+#: .\models.py:33
 msgid "Comment Text"
 msgstr "متن نظر"
 
-#: .\models.py:34
+#: .\models.py:37
 msgid "Rate"
 msgstr "امتیاز"
 
-#: .\models.py:36
+#: .\models.py:39
 msgid "Active"
 msgstr "فعال"
 
-#: .\templates\products\product_detail.html:24
+#: .\templates\products\product_detail.html:25
 msgid "details of"
 msgstr "توضیحات محصول"
 
-#: .\templates\products\product_detail.html:50
-#: .\templates\products\product_detail.html:52
-#: .\templates\products\product_detail.html:269
-#: .\templates\products\product_detail.html:284
+#: .\templates\products\product_detail.html:53
+#: .\templates\products\product_detail.html:55
+#: .\templates\products\products_list.html:69
 msgid "$"
 msgstr "تومان"
 
-#: .\templates\products\product_detail.html:64
+#: .\templates\products\product_detail.html:67
 msgid "Add To Card"
 msgstr "اضافه به سبد خرید"
 
-#: .\templates\products\product_detail.html:70
+#: .\templates\products\product_detail.html:73
 msgid "Categories"
 msgstr "دسته بندی ها"
 
-#: .\templates\products\product_detail.html:71
+#: .\templates\products\product_detail.html:74
 msgid "Clothes"
 msgstr "لباس"
 
-#: .\templates\products\product_detail.html:72
+#: .\templates\products\product_detail.html:75
 msgid "Summer"
 msgstr "تابستانی"
 
-#: .\templates\products\product_detail.html:73
+#: .\templates\products\product_detail.html:76
 msgid "Warm"
 msgstr "گرم"
 
-#: .\templates\products\product_detail.html:74
+#: .\templates\products\product_detail.html:77
 msgid "Feminine"
 msgstr "زنانه"
 
-#: .\templates\products\product_detail.html:86
+#: .\templates\products\product_detail.html:89
 msgid "Product Description"
 msgstr "توضیحات محصول"
 
-#: .\templates\products\product_detail.html:90
+#: .\templates\products\product_detail.html:93
 msgid "Product Features"
 msgstr "ویژگی های محصول"
 
-#: .\templates\products\product_detail.html:94
+#: .\templates\products\product_detail.html:97
 msgid "Comments"
 msgstr "نظرات"
 
-#: .\templates\products\product_detail.html:110
+#: .\templates\products\product_detail.html:113
 msgid "Weight"
 msgstr "وزن"
 
-#: .\templates\products\product_detail.html:114
+#: .\templates\products\product_detail.html:117
 msgid "Size"
 msgstr "اندازه"
 
-#: .\templates\products\product_detail.html:120
+#: .\templates\products\product_detail.html:123
 msgid "Black"
 msgstr "مشکی"
 
-#: .\templates\products\product_detail.html:121
+#: .\templates\products\product_detail.html:124
 msgid "Green"
 msgstr "سبز"
 
-#: .\templates\products\product_detail.html:122
+#: .\templates\products\product_detail.html:125
 msgid "red"
 msgstr "قرمز"
 
-#: .\templates\products\product_detail.html:123
+#: .\templates\products\product_detail.html:126
 msgid "Orange"
 msgstr "نارنجی"
 
-#: .\templates\products\product_detail.html:133
+#: .\templates\products\product_detail.html:136
 msgid "Comments For"
 msgstr "نظر برای"
 
-#: .\templates\products\product_detail.html:191
+#: .\templates\products\product_detail.html:194
 msgid "Write Your Comment"
 msgstr "نظر خود را بنویسید"
 
-#: .\templates\products\product_detail.html:196
+#: .\templates\products\product_detail.html:199
 msgid "Send"
 msgstr "ارسال"
 
-#: .\templates\products\product_detail.html:201
+#: .\templates\products\product_detail.html:206
+msgid "Commenting"
+msgstr "نظردادن"
+
+#: .\templates\products\product_detail.html:210
 msgid "to write comment please log in to your account first"
 msgstr "برای نوشتن نظر اول وارد حسابت شو"
 
-#: .\templates\products\product_detail.html:202
+#: .\templates\products\product_detail.html:211
 msgid "Log in<"
 msgstr "ورود به حساب"
 
-#: .\templates\products\product_detail.html:238
-msgid "Shopping Card"
-msgstr "سبد خرید"
-
-#: .\templates\products\product_detail.html:293
-msgid "Check shopping card"
-msgstr "مشاهده سبد خرید"
-
-#: .\templates\products\product_detail.html:294
-msgid "Pay"
-msgstr "پرداخت"
-
-#: .\templates\products\product_detail.html:331
-#: .\templates\products\product_detail.html:340
+#: .\templates\products\product_detail.html:273
+#: .\templates\products\product_detail.html:282
 msgid "Sale"
 msgstr "فروش"
 
 #: .\views.py:66
 msgid "Comment Sent!"
 msgstr "نظر ارسال شد!"
+
+#~ msgid "Shopping Card"
+#~ msgstr "سبد خرید"
+
+#~ msgid "Check shopping card"
+#~ msgstr "مشاهده سبد خرید"
+
+#~ msgid "Pay"
+#~ msgstr "پرداخت"
