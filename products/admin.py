@@ -5,6 +5,7 @@ from .models import Product, Comment
 
 class CommentsInline(admin.StackedInline):
     model = Comment
+    classes = ['collapse']
     fields = ['user', 'text', 'rate', 'is_active']
     extra = 1
 

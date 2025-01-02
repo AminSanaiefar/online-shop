@@ -4,3 +4,4 @@ db.sqlite3
 todo.text
 .env
 __pycache__/
+staticfiels/
