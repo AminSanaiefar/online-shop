@@ -19,5 +19,5 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 @admin.register(Comment)
-class ModelNameAdmin(admin.ModelAdmin):
+class CommentAdmin(admin.ModelAdmin):
     pass

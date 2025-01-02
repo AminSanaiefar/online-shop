@@ -27,4 +27,4 @@ class OrderItem(models.Model):
     quantity = models.PositiveIntegerField(default=1, verbose_name=_('Quantity'))
 
     def __str__(self):
-        return f'{self.order} {self.product} X {self.quantity} [total price:{self.quantity * self.price}]'
+        return f'{self.product} X {self.quantity} [total price:{self.quantity * self.price}]'
