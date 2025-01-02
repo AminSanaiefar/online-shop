@@ -9,20 +9,12 @@ from .upload_method import product_image_upload
 
 
 class Product(models.Model):
-<<<<<<< HEAD
     title = models.CharField(_('Title'), max_length=100)
     short_desc = models.CharField(_('Short Description'), max_length=500)
     description = tiny_models.HTMLField(_('Description'))
     price = models.PositiveIntegerField(_('Price'), default=0)
     image = models.ImageField(_('Product Image'), upload_to=product_image_upload)
     active = models.BooleanField(_('Active'), default=True)
-=======
-    title = models.CharField(max_length=100)
-    description = tiny_models.HTMLField()
-    price = models.PositiveIntegerField(default=0)
-    image = models.ImageField(verbose_name=_('Product Image'), upload_to=product_image_upload, blank=True)
-    active = models.BooleanField(default=True)
->>>>>>> ac24766300803d3cd1dba04b6f9e855ed45e9e16
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now=True)
 
