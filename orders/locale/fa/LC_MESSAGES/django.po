@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-02 16:46+0330\n"
+"PO-Revision-Date: 2025-01-02 15:35+0330\n"
+"Last-Translator:   <amin@amin.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.1\n"
+
+#: .\models.py:9
+msgid "User"
+msgstr "کاربر"
+
+#: .\models.py:10
+msgid "Is Paid"
+msgstr "وضعیت پرداخت"
+
+#: .\models.py:11 .\templates\orders\order_craete.html:43
+msgid "First Name"
+msgstr "نام"
+
+#: .\models.py:12 .\templates\orders\order_craete.html:47
+msgid "Last Name"
+msgstr "نام خانوادگی"
+
+#: .\models.py:13 .\templates\orders\order_craete.html:59
+msgid "Phone Number"
+msgstr "شماره همراه"
+
+#: .\models.py:14 .\templates\orders\order_craete.html:53
+msgid "Address"
+msgstr "آدرس"
+
+#: .\models.py:15 .\templates\orders\order_craete.html:71
+msgid "Note"
+msgstr "یادداشت"
+
+#: .\models.py:26 .\templates\orders\order_craete.html:91
+msgid "Price"
+msgstr "قیمت نهایی"
+
+#: .\models.py:27 .\templates\orders\order_craete.html:90
+msgid "Quantity"
+msgstr "تعداد"
+
+#: .\templates\orders\order_craete.html:20
+msgid "Order"
+msgstr "سفارش"
+
+#: .\templates\orders\order_craete.html:37
+msgid "Order Detail"
+msgstr "جزئیات سفارش"
+
+#: .\templates\orders\order_craete.html:65
+msgid "Email"
+msgstr "ایمیل"
+
+#: .\templates\orders\order_craete.html:81
+msgid "Your Order"
+msgstr "سفارش شما"
+
+#: .\templates\orders\order_craete.html:88
+msgid "Product"
+msgstr "محصول"
+
+#: .\templates\orders\order_craete.html:89
+msgid "Unit Price"
+msgstr "فی واحد"
+
+#: .\templates\orders\order_craete.html:100
+#: .\templates\orders\order_craete.html:107
+msgid "$"
+msgstr "تومان"
+
+#: .\templates\orders\order_craete.html:106
+msgid "Total"
+msgstr "مجموع"
+
+#: .\templates\orders\order_craete.html:112
+msgid "Payment Option"
+msgstr "روش پرداخت"
+
+#: .\templates\orders\order_craete.html:126
+msgid "Cart is empty!"
+msgstr "سبد خرید خالی است!"
+
+#: .\templates\orders\order_craete.html:127
+msgid "Go Shopping"
+msgstr ""

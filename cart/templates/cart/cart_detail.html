@@ -63,7 +63,7 @@
                                                         <span class="money">{{ item.product_obj.price|intcomma:False|translate_number }} {% trans '$' %}</span>
                                                     </span>
                                                 </td>
-                                                <td class="product-quantity">
+                                                <td class="product-quantity justify-content-center">
                                                     <form class="d-flex" action="{% url 'cart:add-to-cart' item.product_obj.id %}" method="post">
                                                         {% csrf_token %}
                                                         <div class="quantity">
