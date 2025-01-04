@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-02 16:46+0330\n"
-"PO-Revision-Date: 2025-01-02 15:35+0330\n"
-"Last-Translator:   <amin@amin.com>\n"
+"POT-Creation-Date: 2025-01-03 17:15+0330\n"
+"PO-Revision-Date: 2025-01-04 15:29+0330\n"
+"Last-Translator: amin kosna <amin@amin.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,83 +18,102 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.1\n"
 
+#: .\forms.py:14
+msgid "write down your detailed address"
+msgstr "ادرس کامل و دقیق خود را بنویسید"
+
+#: .\forms.py:18
+msgid "leave a note if you want"
+msgstr "اگه نیازه میتونی اینجا یادداشت بزاری"
+
 #: .\models.py:9
 msgid "User"
 msgstr "کاربر"
 
 #: .\models.py:10
 msgid "Is Paid"
-msgstr "وضعیت پرداخت"
+msgstr "پرداخت شده؟"
 
-#: .\models.py:11 .\templates\orders\order_craete.html:43
+#: .\models.py:11 .\templates\orders\order_create.html:45
 msgid "First Name"
 msgstr "نام"
 
-#: .\models.py:12 .\templates\orders\order_craete.html:47
+#: .\models.py:12 .\templates\orders\order_create.html:52
 msgid "Last Name"
 msgstr "نام خانوادگی"
 
-#: .\models.py:13 .\templates\orders\order_craete.html:59
+#: .\models.py:13 .\templates\orders\order_create.html:70
 msgid "Phone Number"
 msgstr "شماره همراه"
 
-#: .\models.py:14 .\templates\orders\order_craete.html:53
+#: .\models.py:14 .\templates\orders\order_create.html:61
 msgid "Address"
 msgstr "آدرس"
 
-#: .\models.py:15 .\templates\orders\order_craete.html:71
+#: .\models.py:15
 msgid "Note"
 msgstr "یادداشت"
 
-#: .\models.py:26 .\templates\orders\order_craete.html:91
+#: .\models.py:26 .\templates\orders\order_create.html:104
 msgid "Price"
 msgstr "قیمت نهایی"
 
-#: .\models.py:27 .\templates\orders\order_craete.html:90
+#: .\models.py:27 .\templates\orders\order_create.html:103
 msgid "Quantity"
 msgstr "تعداد"
 
-#: .\templates\orders\order_craete.html:20
+#: .\templates\orders\order_create.html:20
 msgid "Order"
 msgstr "سفارش"
 
-#: .\templates\orders\order_craete.html:37
+#: .\templates\orders\order_create.html:37
 msgid "Order Detail"
 msgstr "جزئیات سفارش"
 
-#: .\templates\orders\order_craete.html:65
-msgid "Email"
-msgstr "ایمیل"
+#: .\templates\orders\order_create.html:79
+msgid "Order Note"
+msgstr "یادداشت سفارش"
 
-#: .\templates\orders\order_craete.html:81
+#: .\templates\orders\order_create.html:88
+msgid "Submit Order"
+msgstr "ثبت سفارش"
+
+#: .\templates\orders\order_create.html:95
 msgid "Your Order"
 msgstr "سفارش شما"
 
-#: .\templates\orders\order_craete.html:88
+#: .\templates\orders\order_create.html:102
 msgid "Product"
 msgstr "محصول"
 
-#: .\templates\orders\order_craete.html:89
-msgid "Unit Price"
-msgstr "فی واحد"
-
-#: .\templates\orders\order_craete.html:100
-#: .\templates\orders\order_craete.html:107
+#: .\templates\orders\order_create.html:112
+#: .\templates\orders\order_create.html:119
 msgid "$"
 msgstr "تومان"
 
-#: .\templates\orders\order_craete.html:106
+#: .\templates\orders\order_create.html:118
 msgid "Total"
 msgstr "مجموع"
 
-#: .\templates\orders\order_craete.html:112
+#: .\templates\orders\order_create.html:124
 msgid "Payment Option"
 msgstr "روش پرداخت"
 
-#: .\templates\orders\order_craete.html:126
+#: .\templates\orders\order_create.html:138
 msgid "Cart is empty!"
 msgstr "سبد خرید خالی است!"
 
-#: .\templates\orders\order_craete.html:127
+#: .\templates\orders\order_create.html:139
 msgid "Go Shopping"
-msgstr ""
+msgstr "شروع به خرید"
+
+#: .\views.py:17
+msgid "you must add some stuff to your cart first"
+msgstr "اول باید چیزی به سبد خرید اضافه کنی"
+
+#: .\views.py:41
+msgid "your order has successfully placed."
+msgstr "سفارش شما با موفقیت ثبت شد"
+
+#~ msgid "Checkout"
+#~ msgstr "پرداخت"

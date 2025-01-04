@@ -33,7 +33,8 @@ def add_to_cart_view(request, product_id):
     else:
         messages.error(request, _('Invalid Request'))
         return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
-    return redirect('cart:cart-detail')
+
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
 
 def remove_from_cart(request, product_id):
@@ -42,3 +43,14 @@ def remove_from_cart(request, product_id):
     cart.remove(product)
 
     return redirect('cart:cart-detail')
+
+
+@require_POST
+def clear_cart(request):
+    cart = Cart(request)
+    if len(cart):
+        cart.clear()
+        messages.success(request, _('Cart Successfully cleared'))
+    else:
+        messages.error(request, _('Cart Is Already Empty'))
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))

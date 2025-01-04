@@ -85,11 +85,16 @@
                                 </div>
                             </div>
                         </div>
+                    {% if cart %}
                         <div class="row no-gutters border-top pt--20 mt--20">
                             <div class="col-sm-6 text-sm-right">
-                                <button type="submit" class="cart-form__btn">{% trans 'Clear cart' %}</button>
+                                <form action="{% url 'cart:clear-cart' %}" method="post">
+                                    {% csrf_token %}
+                                    <button type="submit" class="cart-form__btn">{% trans 'Clear Cart' %}</button>
+                                </form>
                             </div>
                         </div>
+                    {% endif %}
                     </div>
                     <div class="col-lg-4">
                         <div class="cart-collaterals">
@@ -108,8 +113,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="checkout.html" class="btn btn-fullwidth btn-bg-red btn-color-white btn-hover-2">
-                                ثبت سفارش
+                            <a href="{% url 'order:order-create' %}" class="btn btn-fullwidth btn-bg-red btn-color-white btn-hover-2">
+                                {% trans 'checkout' %}
                             </a>
                         </div>
                     </div>

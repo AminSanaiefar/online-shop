@@ -8,14 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-03 13:30+0330\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2025-01-04 14:39+0330\n"
+"PO-Revision-Date: 2025-01-03 16:31+0330\n"
+"Last-Translator:   <amin@amin.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.1\n"
 
 #: .\models.py:12
 msgid "Title"
@@ -39,7 +40,7 @@ msgstr "تصویر محصول"
 
 #: .\models.py:17 .\models.py:40
 msgid "Active"
-msgstr ""
+msgstr "فعال"
 
 #: .\models.py:34
 msgid "Comment Author"
@@ -55,7 +56,7 @@ msgstr "امتیاز"
 
 #: .\templates\products\product_detail.html:27
 msgid "details of"
-msgstr ""
+msgstr "جزئیات"
 
 #: .\templates\products\product_detail.html:55
 #: .\templates\products\product_detail.html:57
@@ -152,10 +153,10 @@ msgstr "ورود به حساب"
 msgid "Sale"
 msgstr "فروش"
 
-#: .\templates\products\products_list.html:76
+#: .\templates\products\products_list.html:79
 msgid "Add to cart"
 msgstr "اضافه به سبد خرید"
 
-#: .\views.py:66
+#: .\views.py:63
 msgid "Comment Sent!"
 msgstr "نظر ارسال شد!"
