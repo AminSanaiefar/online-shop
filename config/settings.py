@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'cart.apps.CartConfig',
     'persian_trans.apps.PersianTransConfig',
     'orders.apps.OrdersConfig',
+    'payment.apps.PaymentConfig',
 ]
 
 SITE_ID = 1
@@ -224,3 +225,5 @@ MESSAGE_TAGS = {
     messages.WARNING: 'alert alert-warning',
     messages.INFO: 'alert alert-primary',
 }
+
+MERCHANT_ID = env('ZARINPAL_MERCHANT_ID')

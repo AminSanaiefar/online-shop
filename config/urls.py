@@ -25,6 +25,7 @@ urlpatterns = [
     path('products/', include('products.urls')),
     path('cart/', include('cart.urls')),
     path('order/', include('orders.urls')),
+    path('payment/', include('payment.urls')),
 
     # Third party apps path
     path('rosetta/', include('rosetta.urls')),

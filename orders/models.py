@@ -13,11 +13,15 @@ class Order(models.Model):
     phone = models.CharField(max_length=11, verbose_name=_('Phone Number'))
     address = models.CharField(max_length=650, verbose_name=_('Address'))
     order_note = models.CharField(max_length=500, blank=True, verbose_name=_('Note'))
+    zarinpal_authority = models.CharField(max_length=250, blank=True)
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return f'Order: {self.id}'
+
+    def get_total_price(self):
+        return sum([item.quantity * item.price for item in self.items.all()])
 
 
 class OrderItem(models.Model):
