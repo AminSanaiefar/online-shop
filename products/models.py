@@ -3,9 +3,24 @@ from django.urls import reverse
 from django.contrib.auth import get_user_model
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.utils.translation import gettext_lazy as _
+from django.utils import timezone
 
 from tinymce import models as tiny_models
 from .upload_method import product_image_upload
+
+
+class Discount(models.Model):
+    title = models.CharField(max_length=60)
+    percentage = models.DecimalField(max_digits=5, decimal_places=2)
+    start_date = models.DateTimeField(default=timezone.now())
+    end_date = models.DateTimeField(default=timezone.now())
+
+    def __str__(self):
+        return f'{int(self.percentage)}% {self.title}'
+
+    def is_active(self):
+        now = timezone.now()
+        return (not self.start_date or self.start_date <= now) and (not self.end_date or now <= self.end_date)
 
 
 class Product(models.Model):
@@ -15,6 +30,7 @@ class Product(models.Model):
     price = models.PositiveIntegerField(_('Price'), default=0)
     image = models.ImageField(_('Product Image'), upload_to=product_image_upload)
     active = models.BooleanField(_('Active'), default=True)
+    discount = models.ForeignKey(Discount, on_delete=models.SET_NULL, null=True, blank=True, related_name="products")
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now=True)
 
@@ -23,6 +39,19 @@ class Product(models.Model):
 
     def get_absolute_url(self):
         return reverse('product-detail', args=[self.id])
+
+    def has_discount(self):
+        if self.discount:
+            return self.discount.is_active()
+        return False
+
+    def get_discounted_price(self):
+        """
+        Calculate the product's price after applying its discount, if active.
+        """
+        if self.has_discount():
+            return int(self.price - (self.price * (self.discount.percentage / 100)))
+        return self.price
 
 
 class ActiveCommentsManager(models.Manager):
