@@ -4,8 +4,9 @@ from django.views import generic
 from django.contrib import messages
 from django.utils.translation import gettext as _
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import HttpResponseRedirect
 
-from .models import Product, Comment
+from .models import Product, Comment, FavoriteProduct
 from .forms import CommentForm
 
 
@@ -62,3 +63,15 @@ class CommentCreateView(LoginRequiredMixin, generic.CreateView):
         obj.save()
         messages.success(self.request, messages.INFO, _("Comment Sent!"))
         return super().form_valid(form)
+
+
+@login_required
+def add_to_favorites(request, pk):
+    try:
+        product = Product.objects.get(pk=pk)
+        FavoriteProduct.objects.create(user=request.user, product=product).save()
+        messages.success(request, _('Product Added To Your Wishlist.'))
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+    except Product.DoesNotExist:
+        messages.error(request, _('Product Does Not Exists For Adding To Wishlist.'))
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))

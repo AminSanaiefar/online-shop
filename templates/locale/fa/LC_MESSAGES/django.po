@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-30 20:49+0330\n"
+"POT-Creation-Date: 2025-01-20 19:17+0330\n"
 "PO-Revision-Date: 2024-12-30 20:47+0330\n"
 "Last-Translator:   <amin@amin.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,69 +18,41 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.1\n"
 
-#: .\_base.html:65
+#: .\_base.html:64
 msgid "Home"
 msgstr "خانه"
 
-#: .\_base.html:70
+#: .\_base.html:69
 msgid "Weblog"
 msgstr "وبلاگ"
 
-#: .\_base.html:75
+#: .\_base.html:74
 msgid "Pages"
 msgstr "صفحات"
 
-#: .\_base.html:80 .\_base.html:229
+#: .\_base.html:79 .\footer.html:20
 msgid "Contact us"
 msgstr "تماس با ما"
 
-#: .\_base.html:109
+#: .\_base.html:108
 msgid "Log Out"
 msgstr "خروج"
 
-#: .\_base.html:113
+#: .\_base.html:112
 msgid "Log in"
 msgstr "ورود"
 
-#: .\_base.html:116
+#: .\_base.html:115 .\account\login.html:53
 msgid "Sign Up"
 msgstr "ثبت نام"
 
-#: .\_base.html:120
+#: .\_base.html:119
 msgid "Favorits"
 msgstr "علاقه مندی ها"
 
-#: .\_base.html:123
+#: .\_base.html:122
 msgid "Order history"
 msgstr "تاریجچه سفارشات"
-
-#: .\_base.html:171
-msgid "Cart"
-msgstr "سبد خرید"
-
-#: .\_base.html:189 .\_base.html:197
-msgid "$"
-msgstr "تومان"
-
-#: .\_base.html:196
-msgid "total price"
-msgstr "قیمت کل"
-
-#: .\_base.html:200
-msgid "Go to cart"
-msgstr "مشاهده سبد خرید"
-
-#: .\_base.html:201
-msgid "checkout"
-msgstr "پرداخت"
-
-#: .\_base.html:227
-msgid "About us"
-msgstr "درباره ما"
-
-#: .\_base.html:228
-msgid "Rules and regulations"
-msgstr "قوانین و مقررات"
 
 #: .\account\email\email_confrimation_message.txt:5
 #, python-format
@@ -121,6 +93,47 @@ msgid ""
 "This email confirmation link expired or is invalid. Please <a href=\"%"
 "(email_url)s\">issue a new email confirmation request</a>."
 msgstr ""
+
+#: .\account\login.html:4 .\account\login.html:16 .\account\login.html:47
+#, fuzzy
+#| msgid "Log in"
+msgid "Log In"
+msgstr "ورود"
+
+#: .\account\login.html:21 .\account\login.html:32
+msgid "Address"
+msgstr ""
+
+#: .\account\login.html:43
+msgid "Forgot Password?"
+msgstr ""
+
+#: .\account\login.html:50
+msgid "Or"
+msgstr ""
+
+#: .\footer.html:18
+msgid "About us"
+msgstr "درباره ما"
+
+#: .\footer.html:19
+msgid "Rules and regulations"
+msgstr "قوانین و مقررات"
+
+#~ msgid "Cart"
+#~ msgstr "سبد خرید"
+
+#~ msgid "$"
+#~ msgstr "تومان"
+
+#~ msgid "total price"
+#~ msgstr "قیمت کل"
+
+#~ msgid "Go to cart"
+#~ msgstr "مشاهده سبد خرید"
+
+#~ msgid "checkout"
+#~ msgstr "پرداخت"
 
 #~ msgid "User account"
 #~ msgstr "حساب کاربری"

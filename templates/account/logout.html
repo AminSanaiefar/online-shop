@@ -1,10 +1,17 @@
 {% extends '_base.html' %}
-{% block title %}Log Out{% endblock %}
+{% load i18n %}
+{% block title %}{% trans 'Log Out' %}{% endblock %}
 {% block content %}
-    <h1 class="text-danger">Log Out</h1>
-    <h3>Are You Sure You Want To Log Out Of <span class="text-info"><b>{{ user.email }}</b></span></h3>
-    <form action="" method="post">
-        {% csrf_token %}
-        <input class="btn btn-danger mt-3" type="submit" value="Log Out">
-    </form>
+    <div class="wrapper">
+        <div class="container-fluid justify-content-center mt-5 mb-5" align="center">
+            <div class="shadow col-4 pt-5">
+                <h1 class="text-danger mb-5">{% trans 'Log Out' %}</h1>
+                <h3>{% trans 'Are You Sure You Want To Log Out Of' %} <span class="text-info"><b>{{ user.email }}</b></span>?</h3>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <input class="btn btn-danger mt-3 mb-5" type="submit" value="{% trans 'Log Out' %}">
+                </form>
+            </div>
+        </div>
+    </div>
 {% endblock %}

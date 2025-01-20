@@ -33,7 +33,6 @@ def add_to_cart_view(request, product_id):
     else:
         messages.error(request, _('Invalid Request'))
         return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
-
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
 

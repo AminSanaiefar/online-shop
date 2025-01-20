@@ -80,3 +80,9 @@ class Comment(models.Model):
 
     def __str__(self):
         return f'{self.user}: {" ".join(self.text.split(' ')[:25])}...'
+
+
+class FavoriteProduct(models.Model):
+    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='favorites')
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='+')
+    created_date = models.DateField(auto_now_add=True)

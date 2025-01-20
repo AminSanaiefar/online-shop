@@ -1,7 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+
 import os
 from uuid import uuid4
+
+from products.models import Product
 
 
 def user_profile_picture_upload(instance, filename):

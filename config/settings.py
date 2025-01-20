@@ -45,23 +45,24 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
 
+
     # third party apps
+    'allauth',
     'crispy_forms',
     "crispy_bootstrap5",
-    'allauth',
     'allauth.account',
     'rosetta',
     'jalali_date',
     'tinymce',
 
     # local apps
-    'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
     'products.apps.ProductsConfig',
     'cart.apps.CartConfig',
     'persian_trans.apps.PersianTransConfig',
     'orders.apps.OrdersConfig',
     'payment.apps.PaymentConfig',
+    'accounts.apps.AccountsConfig',
 ]
 
 SITE_ID = 1
