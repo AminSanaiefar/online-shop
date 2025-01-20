@@ -47,7 +47,8 @@ class Product(models.Model):
 
     def get_discounted_price(self):
         """
-        Calculate the product's price after applying its discount, if active.
+        Calculate the product's price after applying its discount if product has active Discount.
+        if no discount was available normal price will returned.
         """
         if self.has_discount():
             return int(self.price - (self.price * (self.discount.percentage / 100)))

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Product, Comment
+from .models import Product, Comment, Discount
 
 
 class CommentsInline(admin.StackedInline):
@@ -20,4 +20,9 @@ class ProductAdmin(admin.ModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Discount)
+class DiscountAdmin(admin.ModelAdmin):
     pass

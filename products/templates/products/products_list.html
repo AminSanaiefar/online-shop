@@ -55,14 +55,21 @@
                                                                 </a>
                                                             </div>
                                                         </div>
-                                                        <span class="product-badge">تخفیف ویژه</span>
+                                                        {% if product.has_discount %}
+                                                            <span class="product-badge">{{ product.discount }}</span>
+                                                        {% endif %}
                                                     </figure>
                                                     <div class="product-info">
                                                         <h3 class="product-title h6 mb--15">
                                                             <a href="{{ product.get_absolute_url }}">{{ product.title }}</a>
                                                         </h3>
                                                         <div class="product-price-wrapper mb--30">
-                                                            <span class="money">{{ product.price|intcomma:False|translate_number }} {% trans '$' %}</span>
+                                                            {% if product.has_discount %}
+                                                                <p class="money text-success">{{ product.get_discounted_price|intcomma:False|translate_number }} {% trans '$' %}</p>
+                                                                <span class="old-price text-danger"><span class="money text-danger">{{ product.price|intcomma:False|translate_number }} {% trans '$' %}</span></span>
+                                                            {% else %}
+                                                                <span class="money">{{ product.price|intcomma:False|translate_number }} {% trans '$' %}</span>
+                                                            {% endif %}
                                                         </div>
                                                         <form action="{% url 'cart:add-to-cart' product.id %}" method="post">
                                                             {% csrf_token %}

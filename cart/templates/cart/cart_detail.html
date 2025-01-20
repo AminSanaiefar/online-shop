@@ -60,7 +60,7 @@
                                                 </td>
                                                 <td class="product-price">
                                                     <span class="product-price-wrapper">
-                                                        <span class="money">{{ item.product_obj.price|intcomma:False|translate_number }} {% trans '$' %}</span>
+                                                        <span class="money">{{ item.product_obj.get_discounted_price|intcomma:False|translate_number }} {% trans '$' %}</span>
                                                     </span>
                                                 </td>
                                                 <td class="product-quantity justify-content-center">

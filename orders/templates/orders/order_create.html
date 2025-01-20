@@ -39,7 +39,6 @@
                         <div class="checkout-form">
                             <form action="" method="post" class="form form--checkout">
                                 {% csrf_token %}
-
                                 <div class="form-row mb--20">
                                     <div class="form__group col-md-6 mb-sm--30 justify-content-start">
                                         <label for="billing_fname" class="form__label form__label--2">{% trans 'First Name' %}  <span class="required">*</span></label>
@@ -119,7 +118,7 @@
                                                 <tr>
                                                     <td class="text-center">{{ item.product_obj.title }}</td>
                                                     <td class="text-center">{{ item.quantity|translate_number }}</td>
-                                                    <td class="text-center">{{ item.product_obj.price|intcomma:False|translate_number }} {% trans '$' %}</td>
+                                                    <td class="text-center">{{ item.product_obj.get_discounted_price|intcomma:False|translate_number }} {% trans '$' %}</td>
                                                 </tr>
                                             {% endfor %}
                                         </tbody>

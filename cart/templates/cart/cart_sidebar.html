@@ -31,7 +31,7 @@
                                     </a>
                                 </span>
                                 <span class="mini-cart__product__quantity">
-                                    <span>{{ item.product_obj.price|intcomma:False|translate_number }} {% trans '$' %}</span> &#215; <span>{{ item.quantity|translate_number }}</span>
+                                    <span>{{ item.product_obj.get_discounted_price|intcomma:False|translate_number }} {% trans '$' %}</span> &#215; <span>{{ item.quantity|translate_number }}</span>
                                 </span>
                             </div>
                         </li>

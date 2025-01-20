@@ -29,7 +29,7 @@ class Cart:
         for product in products:
             cart[str(product.id)]['product_obj'] = product
         for item in cart.values():
-            item['total_price'] = item['product_obj'].price * item['quantity']
+            item['total_price'] = item['product_obj'].get_discounted_price() * item['quantity']
             yield item
 
     def __len__(self):
@@ -71,4 +71,7 @@ class Cart:
         self.save()
 
     def total_price(self):
-        return sum(product['total_price'] for product in self.cart.values())
+        return sum(product['total_price'] if not product['product_obj'].has_discount()
+                   else product['product_obj'].get_discounted_price() * product['quantity']
+                   for product in self.cart.values()
+                   )
