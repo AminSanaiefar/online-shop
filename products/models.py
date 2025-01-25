@@ -12,8 +12,8 @@ from .upload_method import product_image_upload
 class Discount(models.Model):
     title = models.CharField(max_length=60)
     percentage = models.DecimalField(max_digits=5, decimal_places=2)
-    start_date = models.DateTimeField(default=timezone.now())
-    end_date = models.DateTimeField(default=timezone.now())
+    start_date = models.DateTimeField(default=timezone.now)
+    end_date = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return f'{int(self.percentage)}% {self.title}'
