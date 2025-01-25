@@ -33,7 +33,7 @@ To install Project Title, follow these steps:
 
 ## **Usage**
 
-To use Project Title, follow these steps:
+To use this project, follow these steps:
 
 1. Open the project in your favorite code editor.
 2. Modify the source code to fit your needs in (config\settings.py).
