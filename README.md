@@ -23,7 +23,7 @@ This is a Online Shop that supports features like:
 
 ## **Installation**
 
-To install Project Title, follow these steps:
+To install this project, follow these steps:
 
 1. Clone the repository: **`git clone https://github.com/AminSanaiefar/online-shop.git`**
 2. Navigate to the project directory: **`cd online-shop`**
